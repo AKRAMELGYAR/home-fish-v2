@@ -4,7 +4,11 @@ const OrderSchema = new mongoose.Schema({
     products: [
         {
           product: { type: Object, required: true },
-          quantity: { type: Number, required: true }
+          quantity: { type: Number, required: true },
+          size : {
+            type : String ,
+            enum :['S' , 'M' , 'L']
+          }
         }
     ],
 
@@ -20,10 +24,7 @@ const OrderSchema = new mongoose.Schema({
       }
     },
 
-    size : {
-        type : String ,
-        enum :['S' , 'M' , 'L']
-      }
+    
 })
 
 module.exports = mongoose.model('Order' , OrderSchema)

@@ -2,12 +2,11 @@ const express = require('express');
 const  mongoose = require('mongoose');
 const app = express();
 const Product = require('../home-fish-v2/models/product')
-
+const MONGOOSE_URI = require('./MongoUri')
 
 
 app.use(express.json());
-MONGOOSE_URI = 'mongodb+srv://akramelgyar:Uchihasasuke2003@application.tlxqlel.mongodb.net/app?retryWrites=true&w=majority&appName=application'
- mongoose.connect(MONGOOSE_URI)
+mongoose.connect('mongodb+srv://moustafakolkailaofficial:Lord@*611#@M&K!10@cluster0.qnja7yk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
  .then(()=>{
     app.listen(3000 , ()=>{
         console.log("started on port 3000")
