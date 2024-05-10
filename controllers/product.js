@@ -12,7 +12,7 @@ module.exports = {
             img_url: img_url,
             quantity: quantity,
         });
-        newProduct.save((err, product) => {
+        await newProduct.save((err, product) => {
             if (err) {
                 console.error(err);
                 res.status(500).send('Error adding product');
@@ -20,10 +20,9 @@ module.exports = {
                 res.status(201).json(product);
             }
         });
-      } catch (error) {
-       
-      }
+      } 
+      catch (error) { 
+        console.log(error)
+       }
     },
-  
-    
   }

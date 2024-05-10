@@ -1,2 +1,2 @@
-MONGOOSE_URI='mongodb+srv://moustafakolkailaofficial:Lord@*611#@M&K!10@cluster0.qnja7yk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0'
+MONGOOSE_URI='mongodb+srv://akramelgyar:Uchihasasuke2003@application.tlxqlel.mongodb.net/?retryWrites=true&w=majority&appName=application'
 module.exports=MONGOOSE_URI
