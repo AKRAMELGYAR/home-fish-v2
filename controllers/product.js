@@ -17,16 +17,16 @@ const  postAddProduct = async (req, res, next) => {
     const error = appError.create('Error adding product', 500, "fail")
     return next(error)
   }
-}  
+} 
 
-const getProducts = async(req, res, next) => {
+const  getProducts = async(req, res, next)=>{
   try {
     const products = await Product.find();
     res.json(products);
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-};
+}
 
 const getProduct = async(req, res, next) => {
   try {
@@ -39,7 +39,7 @@ const getProduct = async(req, res, next) => {
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
-};
+}
 
 
 module.exports = {
