@@ -6,7 +6,7 @@ const MONGOOSE_URI = require('./MongoUri')
 
 
 app.use(express.json());
-mongoose.connect('mongodb+srv://moustafakolkailaofficial:Lord@*611#@M&K!10@cluster0.qnja7yk.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect(MONGOOSE_URI)
  .then(()=>{
     app.listen(3000 , ()=>{
         console.log("started on port 3000")
