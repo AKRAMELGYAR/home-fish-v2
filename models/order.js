@@ -5,26 +5,20 @@ const OrderSchema = new mongoose.Schema({
         {
           product: { type: Object, required: true },
           quantity: { type: Number, required: true },
-          size : {
-            type : String ,
-            enum :['S' , 'M' , 'L']
-          }
+          size : {type : String ,enum :['S' , 'M' , 'L']}
         }
     ],
-
     user: {
         email: {
           type: String,
           required: true
         },
         userId: {
-        type: Schema.Types.ObjectId,
+        type: mongoose.Schema.Types.ObjectId,
         required: true,
         ref: 'User'
       }
     },
-
-    
 })
 
 module.exports = mongoose.model('Order' , OrderSchema)
