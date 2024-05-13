@@ -16,7 +16,7 @@ const addOrder = async(req,res,next)=>{
 
 const getOrder = async(req,res,next)=>{
     try {
-        const orderId = req.body.productId;
+        const orderId = req.params.productId;
         const order = await Order.findById(orderId);
         if (!order) {
           return res.status(404).json({ message: 'order not found' });
